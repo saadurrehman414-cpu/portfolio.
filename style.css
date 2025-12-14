@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #111;
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #000, #333);
+  color: #fff;
+  animation: slideDown 1s ease;
+}
+
+.hero img {
+  width: 130px;
+  border-radius: 200%;
+  margin-bottom: 15px;
+}
+
+/* SKILLS */
+.skills {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.skills-container span {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 30px;
+  transition: transform 0.3s;
+}
+
+.skills-container span:hover {
+  transform: scale(1.1);
+}
+
+/* PROJECTS */
+.projects {
+  padding: 60px 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.project-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* CONTACT */
+.contact {
+  padding: 60px 10%;
+  background: #111;
+  color: #fff;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+.contact button {
+  padding: 12px;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.dark .project-card {
+  background: #1e293b;
+  color: #fff;
+}
+
+/* ANIMATIONS */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
